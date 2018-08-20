@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittleWeebDesktop", "LittleWeebDesktop.csproj", "{670F41EF-A4FD-47BF-85D3-A7E0048455B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Linux|Any CPU = Debug Linux|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release Linux|Any CPU = Release Linux|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{670F41EF-A4FD-47BF-85D3-A7E0048455B6}.Debug Linux|Any CPU.ActiveCfg = Debug Linux|Any CPU
+		{670F41EF-A4FD-47BF-85D3-A7E0048455B6}.Debug Linux|Any CPU.Build.0 = Debug Linux|Any CPU
+		{670F41EF-A4FD-47BF-85D3-A7E0048455B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670F41EF-A4FD-47BF-85D3-A7E0048455B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670F41EF-A4FD-47BF-85D3-A7E0048455B6}.Release Linux|Any CPU.ActiveCfg = Release Linux|Any CPU
+		{670F41EF-A4FD-47BF-85D3-A7E0048455B6}.Release Linux|Any CPU.Build.0 = Release Linux|Any CPU
+		{670F41EF-A4FD-47BF-85D3-A7E0048455B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670F41EF-A4FD-47BF-85D3-A7E0048455B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB1CDA1A-382D-4D58-A413-62C10E5E45AF}
+	EndGlobalSection
+EndGlobal
