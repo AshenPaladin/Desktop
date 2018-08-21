@@ -1,29 +1,51 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron');
-var child = require('child_process').execFile;
+var spawn = require('child_process').spawn;
 var osvar = process.platform;
 
 //starting backend
 var executable = "./Backend/LittleWeebDesktop";
 if(osvar == 'win32') {
   executable = executable + ".exe";
+  console.log("Starting backend with windows filepath: " + executable)
+} else {
+  
+  console.log("Starting backend with unix filepath: " + executable)
 }
 
-child(executable, function(err, data){
-  if(err){
-    console.log(err);
-    return;
-  }
-  console.log(data);
-})
+var child = spawn(executable, [""], { detached: false});
+
+child.on('exit', function (code, signal) {
+  console.log('child process exited with ' +
+              `code ${code} and signal ${signal}`);
+  app.quit();
+});
+
+child.on('error', function (error) {
+  console.log(error);
+  app.quit();
+});
+
+child.on('close', function () {
+  console.log('child process closed. ');
+  app.quit();
+});
+
+child.stdout.on('data', (data) => {
+  console.log(`child stdout:\n${data}`);
+});
+
+child.stderr.on('data', (data) => {
+  console.log(`child stderr:\n${data}`);
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1280, height: 720})
+  mainWindow = new BrowserWindow({width: 1280, height: 720,  icon: 'icons/64x64.png'})
 
   // and load the index.html of the app.
   mainWindow.loadFile('./Backend/wwwroot/index.html')

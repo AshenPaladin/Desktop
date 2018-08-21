@@ -20,8 +20,8 @@
     <PackageReference Include="LittleWeebLibrary" Version="0.4.0-Desktop-20180810-1732" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="SimpleIRCLib" Version="2.1.1" />
-    <PackageReference Include="SimpleWebsocketServer" Version="1.0.2" />
+    <PackageReference Include="SimpleIRCLib" Version="2.2.0" />
+    <PackageReference Include="SimpleWebsocketServer" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
