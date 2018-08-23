@@ -1,0 +1,1 @@
+call electron-builder build --config ./electron-builder.json --windows --x64

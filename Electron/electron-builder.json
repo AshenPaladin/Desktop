@@ -10,22 +10,19 @@
 	},
 	"win": {
 		"target": [{
-			"target": "nsis",
-			"arch": ["x64", "ia32"]
+			"target": "nsis"
 		}]
 	},
 	"linux": {
 		"target": [{
-			"target": "deb",
-			"arch": ["x64","armv7l","arm64"]
+			"target": "deb"
 		}],
 		"synopsis": "A anime xdcc client for them lazy weebs, where everything is one click away.",
 		"description": "LittleWeeb is an IRC XDCC based client that uses an easy to use interface where the user no longer has to use commands to download their anime. Simply click on the anime that you want, select the episode, resolution (and possibly source) and your download will start. Even better: You can immediately start watching while your episode is downloading in the background! Have a weeby time, weebs!"
 	},
 	"mac":{
 		"target":[{
-			"target" : "pkg",
-			"arch": ["x64"]
+			"target" : "dmg"
 		}]
 	}
 }
