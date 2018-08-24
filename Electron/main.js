@@ -3,6 +3,17 @@ var fs = require('fs');
 var spawn = require('child_process').spawn;
 var osvar = process.platform;
 const {app, BrowserWindow} = require('electron');
+var sudo = require('sudo-prompt');
+var options = {
+  name: 'LittleWeeb',
+  icns: __dirname + '/icons/icon.icns', // (optional)
+};
+sudo.exec('echo got administrator rights, should run fine now!', options,
+  function(error, stdout, stderr) {
+    if (error) throw error;
+    console.log('stdout: ' + stdout);
+  }
+);
 
 //starting backend
 

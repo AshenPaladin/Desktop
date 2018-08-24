@@ -1,7 +1,13 @@
 {
 	"appId": "com.LittleWeeb.app",
 	"asar": false,
-	"productName": "LittleWeeb",	
+	"productName": "LittleWeeb",
+	"nsis":{
+		"oneClick":false,
+		"perMachine": true,
+		"allowToChangeInstallationDirectory":true,
+		"deleteAppDataOnUninstall": true
+	},	
 	"win": {
 		"target": [{
 			"target": "nsis"

@@ -16,7 +16,8 @@
 	"homepage": "https://littleweeb.github.io",
 	"dependencies": {
 		"detect-port": "^1.2.1",
-		"socket.io": "^2.0.3"
+		"socket.io": "^2.0.3",
+		"sudo-prompt": "^8.2.0"
 	},
 	"devDependencies": {
 		"@types/electron": "^1.6.10",
