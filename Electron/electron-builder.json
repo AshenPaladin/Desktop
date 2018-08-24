@@ -1,6 +1,9 @@
 {
 	"appId": "com.LittleWeeb.app",
-	"asar": false,
+	"asar": true,
+	"asarUnpack": [
+		"/Backend/*"
+	],
 	"productName": "LittleWeeb",	
 	"nsis":{
 		"oneClick":false,
