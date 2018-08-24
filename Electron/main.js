@@ -1,10 +1,18 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron');
+var fs = require('fs');
 var spawn = require('child_process').spawn;
 var osvar = process.platform;
+const {app, BrowserWindow} = require('electron');
 
 //starting backend
-var executable = "./Backend/LittleWeebDesktop";
+
+
+var executable = __dirname + "/Backend/LittleWeebDesktop";
+if (fs.existsSync("/resources")) {
+  // Do something
+  executable = "/resources/app/Backend/LittleWeebDesktop";
+}
+
 if(osvar == 'win32') {
   executable = executable + ".exe";
   console.log("Starting backend with windows filepath: " + executable)

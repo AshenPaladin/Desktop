@@ -1,5 +1,6 @@
 {
 	"name": "LittleWeeb",
+	"files": ["Backend/**/*"],
 	"license": "MIT",
 	"version": "0.4.0",
 	"description": "LittleWeeb is an IRC XDCC based client that uses an easy to use interface where the user no longer has to use commands to download their anime. Simply click on the anime that you want, select the episode, resolution (and possibly source) and your download will start. Even better: You can immediately start watching while your episode is downloading in the background! Have a weeby time, weebs!",
