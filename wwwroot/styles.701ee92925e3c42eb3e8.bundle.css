@@ -52,8 +52,10 @@
 
 /* center stuff */.wrapper{text-align:center}.wrapper-centered{display:inline-block}
 
-/* absolute to frong */.tofront{z-index:9999!important}
+/* absolute to front */.tofront{z-index:9999!important}
 
 /* float  */.fleft{float:left!important}
 
 /* float right */.fright{float:right!important}
+
+/* custom notifications stuff */.custom-notification{min-width:calc(100% - 20px); /* Set a default minimum width */margin-left:10px; /* Divide value of min-width by 2 */margin-right:calc(100% - 10px);background-color:#21ba45; /* Black background color */color:#fff; /* White text color */text-align:center; /* Centered text */border-radius:.28571429rem; /* Rounded borders */padding:16px; /* Padding */position:fixed; /* Sit on top of the screen */z-index:1; /* Add a z-index if needed */bottom:30px /* 30px from the bottom */}
