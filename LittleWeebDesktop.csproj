@@ -17,7 +17,7 @@
     <None Remove="LittleWeebFrontEnd\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LittleWeebLibrary" Version="0.4.0--Desktop-20180908-2134" />
+    <PackageReference Include="LittleWeebLibrary" Version="0.4.0--Desktop-20180909-1647" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="SimpleIRCLib" Version="2.2.0" />
