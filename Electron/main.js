@@ -21,31 +21,38 @@ if(osvar == 'win32') {
   console.log("Starting backend with unix filepath: " + executable)
 }
 
-var child = spawn(executable, [""], { detached: false});
 
-child.on('exit', function (code, signal) {
-  console.log('child process exited with ' +
-              `code ${code} and signal ${signal}`);
-  app.quit();
-});
+var child;
+try {
+    child = spawn(executable, [""], { detached: true });
 
-child.on('error', function (error) {
-  console.log(error);
-  app.quit();
-});
+    child.on('exit', function (code, signal) {
+        console.log('child process exited with ' +
+            `code ${code} and signal ${signal}`);
+        app.quit();
+    });
 
-child.on('close', function () {
-  console.log('child process closed. ');
-  app.quit();
-});
+    child.on('error', function (error) {
+        console.log(error);
+        console.log("Possibility is that the back-end is already running, so application may still run.");
+    });
 
-child.stdout.on('data', (data) => {
-  console.log(`child stdout:\n${data}`);
-});
+    child.on('close', function () {
+        console.log('child process closed. ');
+    });
 
-child.stderr.on('data', (data) => {
-  console.log(`child stderr:\n${data}`);
-});
+    child.stdout.on('data', (data) => {
+        console.log(`child stdout:\n${data}`);
+    });
+
+    child.stderr.on('data', (data) => {
+        console.log(`child stderr:\n${data}`);
+    });
+
+} catch (E) {
+    console.log("Could not start child process running back-end.");
+}
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -53,7 +60,7 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1280, height: 720,  icon: 'icons/64x64.png'})
+  mainWindow = new BrowserWindow({width: 1280, height: 720})
 
   // and load the index.html of the app.
   mainWindow.loadFile('./Backend/wwwroot/index.html')
@@ -79,8 +86,14 @@ app.on('ready', createWindow)
 app.on('window-all-closed', function () {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
-  
-  child.kill();
+
+    console.log("all windows closed, so app is not running, killing childprocess running backend");
+    try {
+        child.kill();
+    } catch (E) {
+        console.log("Could not close childprocess: ");
+        console.log(E);
+    }
   if (process.platform !== 'darwin') {
     app.quit()
   }
@@ -93,6 +106,17 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+app.on('will-quit', () => {
+    // Unregister all shortcuts. 
+    console.log("Will quit, so killing child process running backend.");
+    try {
+        child.kill();
+    } catch (E) {
+        console.log("Could not close childprocess: ");
+        console.log(E);
+    }
+});
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
