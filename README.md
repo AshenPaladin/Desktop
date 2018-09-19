@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-# Desktop Develop
-This branch is for development builds, used for debugging and testing purposes.
-
->>>>>>> develop
 # LittleWeeb
 
 LittleWeeb is a IRC XDCC Client Purely made for downloading anime. It features a simple design made to function and nothing more. It's free, it will always be free, and will never contain Ads or anything that makes you think about giving us money. Since this whole project is voluntary, meant to be voluntary, meant to be non-profit, we, as developers of LittleWeeb, will never start asking for donations of the sorts.
@@ -14,6 +8,9 @@ LittleWeeb is a IRC XDCC Client Purely made for downloading anime. It features a
 [YouTube - v0.4.0](https://youtu.be/LgnheGjRz7Y)
 [YouTube - v0.2.0](https://youtu.be/GbBz1ReDahU)
 [YouTube - pre v0.1.0 version](https://www.youtube.com/watch?v=yJjL9wQEEEQ)
+
+# Actual Source Code
+https://github.com/littleweeb/Library
 
 
 # New (Functional) Features! V0.4.0 is OUT!
