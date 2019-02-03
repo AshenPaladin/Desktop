@@ -17,15 +17,24 @@
     <None Remove="LittleWeebFrontEnd\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LittleWeebLibrary" Version="0.4.0--Desktop-20180909-1647" />
+    <PackageReference Include="LiteDB" Version="4.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="SimpleIRCLib" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="PCLExt.FileStorage" Version="1.4.1.1" />
+    <PackageReference Include="SimpleIRCLib" Version="2.2.1" />
     <PackageReference Include="SimpleWebsocketServer" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Views\" />
     <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LittleWeebLibrary">
+      <HintPath>..\LittleWeebLibrary\bin\Debug\netstandard2.0\LittleWeebLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WeebFileNameParser">
+      <HintPath>..\WeebFileNameParser\WeebFileNameParser\bin\Debug\netstandard2.0\WeebFileNameParser.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
