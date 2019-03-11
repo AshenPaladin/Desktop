@@ -101,11 +101,11 @@ LittleWeeb uses a number of open source projects to work properly:
 
 ### Development
 
-This application is still in development, contains many issues, which I haven't found yet. Since I am doing the grunt of the development, and the front-end is handled by Daniel-Law, the progress is slow. Furthermore, we are doing it in our free-time and mine is just about to run out. Therefor I cannot work on major releases and will only be fixing issues with the current version. App breaking bugs and issues will be solved first and minor issues will be solved lateron. 
+This application is still in development, contains many issues, which I haven't found yet. Since I am doing the grunt of the development, and the front-end is handled by Daniel-Law, the progress is slow. Furthermore, we are doing it in our free-time and mine is just about to run out. Therefore I cannot work on major releases and will only be fixing issues with the current version. App breaking bugs and issues will be solved first and minor issues will be solved lateron. 
 
 ### What can you do?
 
-This application is made with love, for them weebs. But with just the two of us working on LittleWeeb, we can't do that much in the short time limited that we call free time. Therefor, I would humbly ask any LittleWeeb users to help us and eachother out when using LittleWeeb. So.. therefor, in case that you feel like you want to help, please notify us of any issue that you encouter with LittleWeeb using the following guides:
+This application is made with love, for them weebs. But with just the two of us working on LittleWeeb, we can't do that much in the short time limited that we call free time. Therefore, I would humbly ask any LittleWeeb users to help us and eachother out when using LittleWeeb. So.. therefore, in case that you feel like you want to help, please notify us of any issue that you encouter with LittleWeeb using the following guides:
 
 For Linux : https://youtu.be/jvfNACbsw88
 For MacOS : https://youtu.be/hxcVy56M1Po
